@@ -1,7 +1,7 @@
 with open('input.txt') as f:
     lines = f.read().splitlines()
 
-def checkPasspord(lines):
+def checkPassport(lines):
     pList = []
     pDict = {} 
     for line in lines:
@@ -15,9 +15,9 @@ def checkPasspord(lines):
     check = [dic.keys() >= {"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"} for dic in pList]
     return sum(check)
 
-print(checkPasspord(lines))
+print(checkPassport(lines))
 
-def checkPasspord2(lines):
+def checkPassport2(lines):
     pList = []
     pDict = {} 
     for line in lines:
@@ -63,4 +63,4 @@ def checkPasspord2(lines):
             count += valid
     return count
 
-print(checkPasspord2(lines))
+print(checkPassport2(lines))
